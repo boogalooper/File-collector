@@ -1,0 +1,260 @@
+/*
+Code for Import https://scriptui.joonas.me — (Triple click to select): 
+{"activeId":49,"items":{"item-0":{"id":0,"type":"Dialog","parentId":false,"style":{"enabled":true,"varName":"w","windowType":"Dialog","creationProps":{"su1PanelCoordinates":false,"maximizeButton":false,"minimizeButton":false,"independent":false,"closeButton":true,"borderless":false,"resizeable":false},"text":"File collector","preferredSize":[0,0],"margins":16,"orientation":"column","spacing":10,"alignChildren":["fill","top"]}},"item-1":{"id":1,"type":"Panel","parentId":0,"style":{"enabled":true,"varName":"pnSource","creationProps":{"borderStyle":"etched","su1PanelCoordinates":false},"text":"Источник файлов:","preferredSize":[0,0],"margins":10,"orientation":"column","spacing":10,"alignChildren":["left","top"],"alignment":null}},"item-2":{"id":2,"type":"Group","parentId":1,"style":{"enabled":true,"varName":"grBrowse","preferredSize":[0,0],"margins":0,"orientation":"row","spacing":10,"alignChildren":["left","center"],"alignment":null}},"item-3":{"id":3,"type":"EditText","parentId":2,"style":{"enabled":true,"varName":"etSource","creationProps":{"noecho":false,"readonly":true,"multiline":false,"scrollable":false,"borderless":false,"enterKeySignalsOnChange":false},"softWrap":false,"text":"","justify":"left","preferredSize":[400,0],"alignment":null,"helpTip":null}},"item-4":{"id":4,"type":"Button","parentId":2,"style":{"enabled":true,"varName":"bnSource","text":"Обзор...","justify":"center","preferredSize":[0,0],"alignment":null,"helpTip":null}},"item-5":{"id":5,"type":"Group","parentId":1,"style":{"enabled":true,"varName":"grFilter","preferredSize":[0,0],"margins":0,"orientation":"row","spacing":10,"alignChildren":["left","center"],"alignment":null}},"item-6":{"id":6,"type":"StaticText","parentId":5,"style":{"enabled":true,"varName":"stFilter","creationProps":{"truncate":"none","multiline":false,"scrolling":false},"softWrap":false,"text":"искать следующие типы файлов:","justify":"left","preferredSize":[311,0],"alignment":null,"helpTip":null}},"item-7":{"id":7,"type":"DropDownList","parentId":5,"style":{"enabled":true,"varName":"dlFilter","text":"DropDownList","listItems":"","preferredSize":[80,0],"alignment":null,"selection":0,"helpTip":null}},"item-8":{"id":8,"type":"Panel","parentId":0,"style":{"enabled":true,"varName":"pnList","creationProps":{"borderStyle":"etched","su1PanelCoordinates":false},"text":"Список строк для поиска:","preferredSize":[0,0],"margins":10,"orientation":"column","spacing":10,"alignChildren":["fill","top"],"alignment":null}},"item-10":{"id":10,"type":"Group","parentId":38,"style":{"enabled":true,"varName":"grListButtons","preferredSize":[0,0],"margins":0,"orientation":"column","spacing":0,"alignChildren":["center","top"],"alignment":null}},"item-11":{"id":11,"type":"Button","parentId":10,"style":{"enabled":true,"varName":"bnAddList","text":"+","justify":"center","preferredSize":[40,0],"alignment":null,"helpTip":null}},"item-12":{"id":12,"type":"Button","parentId":10,"style":{"enabled":true,"varName":"bnSaveList","text":"↷","justify":"center","preferredSize":[40,0],"alignment":null,"helpTip":null}},"item-13":{"id":13,"type":"Panel","parentId":8,"style":{"enabled":true,"varName":"pnOptions","creationProps":{"borderStyle":"etched","su1PanelCoordinates":false},"text":"Шаблон поиска и переименования файлов:","preferredSize":[0,0],"margins":[15,10,10,10],"orientation":"column","spacing":10,"alignChildren":["fill","top"],"alignment":null}},"item-14":{"id":14,"type":"Group","parentId":13,"style":{"enabled":true,"varName":"grPreset","preferredSize":[0,0],"margins":0,"orientation":"row","spacing":10,"alignChildren":["center","center"],"alignment":null}},"item-15":{"id":15,"type":"Button","parentId":21,"style":{"enabled":true,"varName":"bnRefresh","text":"↻","justify":"center","preferredSize":[30,0],"alignment":null,"helpTip":"перезагрузить"}},"item-16":{"id":16,"type":"Button","parentId":21,"style":{"enabled":true,"varName":"bnSave","text":"↷","justify":"center","preferredSize":[30,0],"alignment":null,"helpTip":"сохранить"}},"item-17":{"id":17,"type":"Button","parentId":21,"style":{"enabled":true,"varName":"bnAdd","text":"+","justify":"center","preferredSize":[30,0],"alignment":null,"helpTip":"добавить"}},"item-19":{"id":19,"type":"DropDownList","parentId":14,"style":{"enabled":true,"varName":"dlPreset","text":"DropDownList","listItems":"","preferredSize":[200,0],"alignment":null,"selection":0,"helpTip":null}},"item-20":{"id":20,"type":"Button","parentId":21,"style":{"enabled":true,"varName":"bnDel","text":"×","justify":"center","preferredSize":[30,0],"alignment":null,"helpTip":"удалить"}},"item-21":{"id":21,"type":"Group","parentId":14,"style":{"enabled":true,"varName":"grPresetButtons","preferredSize":[0,0],"margins":0,"orientation":"row","spacing":0,"alignChildren":["left","center"],"alignment":null}},"item-22":{"id":22,"type":"Group","parentId":50,"style":{"enabled":true,"varName":"grSearch","preferredSize":[0,0],"margins":0,"orientation":"column","spacing":0,"alignChildren":["fill","center"],"alignment":null}},"item-23":{"id":23,"type":"StaticText","parentId":22,"style":{"enabled":true,"varName":"stSearch","creationProps":{"truncate":"none","multiline":false,"scrolling":false},"softWrap":false,"text":"Искать:","justify":"left","preferredSize":[100,0],"alignment":null,"helpTip":null}},"item-24":{"id":24,"type":"EditText","parentId":22,"style":{"enabled":true,"varName":"etSearch","creationProps":{"noecho":false,"readonly":false,"multiline":false,"scrollable":false,"borderless":false,"enterKeySignalsOnChange":false},"softWrap":false,"text":"","justify":"left","preferredSize":[120,0],"alignment":null,"helpTip":null}},"item-25":{"id":25,"type":"Group","parentId":50,"style":{"enabled":true,"varName":"grRename","preferredSize":[0,0],"margins":0,"orientation":"column","spacing":0,"alignChildren":["fill","center"],"alignment":null}},"item-26":{"id":26,"type":"StaticText","parentId":25,"style":{"enabled":true,"varName":"stRename","creationProps":{"truncate":"none","multiline":false,"scrolling":false},"softWrap":false,"text":"Переименовывать:","justify":"left","preferredSize":[340,0],"alignment":null,"helpTip":null}},"item-27":{"id":27,"type":"EditText","parentId":25,"style":{"enabled":true,"varName":"etRename","creationProps":{"noecho":false,"readonly":false,"multiline":false,"scrollable":false,"borderless":false,"enterKeySignalsOnChange":false},"softWrap":false,"text":"","justify":"left","preferredSize":[0,0],"alignment":null,"helpTip":null}},"item-28":{"id":28,"type":"Checkbox","parentId":34,"style":{"enabled":true,"varName":"chMove","text":"перемещать файлы","preferredSize":[0,0],"alignment":null,"helpTip":null}},"item-29":{"id":29,"type":"Group","parentId":34,"style":{"enabled":true,"varName":"grTarget","preferredSize":[0,0],"margins":0,"orientation":"row","spacing":10,"alignChildren":["left","center"],"alignment":null}},"item-30":{"id":30,"type":"EditText","parentId":29,"style":{"enabled":true,"varName":"etTarget","creationProps":{"noecho":false,"readonly":true,"multiline":false,"scrollable":false,"borderless":false,"enterKeySignalsOnChange":false},"softWrap":false,"text":"","justify":"left","preferredSize":[400,0],"alignment":null,"helpTip":null}},"item-31":{"id":31,"type":"Button","parentId":29,"style":{"enabled":true,"varName":"bnTarget","text":"Обзор...","justify":"center","preferredSize":[0,0],"alignment":null,"helpTip":null}},"item-32":{"id":32,"type":"Checkbox","parentId":34,"style":{"enabled":true,"varName":"chSourceAsTarget","text":"папка источника","preferredSize":[0,0],"alignment":null,"helpTip":null}},"item-33":{"id":33,"type":"Divider","parentId":13,"style":{"enabled":true,"varName":"pnDiv"}},"item-34":{"id":34,"type":"Panel","parentId":0,"style":{"enabled":true,"varName":"pnTarget","creationProps":{"borderStyle":"etched","su1PanelCoordinates":false},"text":"Назначение файлов:","preferredSize":[0,0],"margins":[15,10,10,10],"orientation":"column","spacing":10,"alignChildren":["left","top"],"alignment":null}},"item-35":{"id":35,"type":"Group","parentId":0,"style":{"enabled":true,"varName":"grButtons","preferredSize":[0,0],"margins":0,"orientation":"row","spacing":10,"alignChildren":["center","center"],"alignment":null}},"item-36":{"id":36,"type":"Button","parentId":35,"style":{"enabled":true,"varName":"ok","text":"Предпросмотр","justify":"center","preferredSize":[0,0],"alignment":null,"helpTip":null}},"item-37":{"id":37,"type":"Button","parentId":35,"style":{"enabled":true,"varName":"cancel","text":"Отмена","justify":"center","preferredSize":[0,0],"alignment":null,"helpTip":null}},"item-38":{"id":38,"type":"Group","parentId":8,"style":{"enabled":true,"varName":"grList","preferredSize":[0,0],"margins":0,"orientation":"row","spacing":10,"alignChildren":["left","fill"],"alignment":null}},"item-41":{"id":41,"type":"Group","parentId":13,"style":{"enabled":true,"varName":"grPatternButtons","preferredSize":[0,0],"margins":0,"orientation":"row","spacing":5,"alignChildren":["center","center"],"alignment":null}},"item-42":{"id":42,"type":"Button","parentId":41,"style":{"enabled":true,"varName":"bnWord","text":"[N] слово","justify":"center","preferredSize":[0,0],"alignment":null,"helpTip":null}},"item-43":{"id":43,"type":"Button","parentId":41,"style":{"enabled":true,"varName":"bnInterval","text":"[N-N] интервал","justify":"center","preferredSize":[0,0],"alignment":null,"helpTip":null}},"item-44":{"id":44,"type":"Button","parentId":41,"style":{"enabled":true,"varName":"bnFile","text":"[F] имя файла","justify":"center","preferredSize":[0,0],"alignment":null,"helpTip":null}},"item-45":{"id":45,"type":"Button","parentId":41,"style":{"enabled":true,"varName":"bnFolder","text":"[P] имя папки","justify":"center","preferredSize":[0,0],"alignment":null,"helpTip":null}},"item-48":{"id":48,"type":"EditText","parentId":38,"style":{"enabled":true,"varName":null,"creationProps":{"noecho":false,"readonly":false,"multiline":true,"scrollable":true,"borderless":false,"enterKeySignalsOnChange":false},"softWrap":false,"text":"etList","justify":"left","preferredSize":[440,200],"alignment":null,"helpTip":null}},"item-49":{"id":49,"type":"Checkbox","parentId":1,"style":{"enabled":true,"varName":"chSubfolder","text":"учитывать подкаталоги","preferredSize":[0,0],"alignment":null,"helpTip":null}},"item-50":{"id":50,"type":"Group","parentId":13,"style":{"enabled":true,"varName":"grPattern","preferredSize":[0,0],"margins":0,"orientation":"row","spacing":10,"alignChildren":["left","fill"],"alignment":null}},"item-51":{"id":51,"type":"StaticText","parentId":14,"style":{"enabled":true,"varName":"stPreset","creationProps":{"truncate":"none","multiline":false,"scrolling":false},"softWrap":false,"text":"Пресет:","justify":"left","preferredSize":[0,0],"alignment":null,"helpTip":null}},"item-53":{"id":53,"type":"StaticText","parentId":13,"style":{"enabled":true,"varName":"stPreview","creationProps":{"truncate":"none","multiline":false,"scrolling":false},"softWrap":false,"text":"","justify":"left","preferredSize":[470,0],"alignment":null,"helpTip":null}}},"order":[0,1,2,3,4,49,5,6,7,8,38,48,10,11,12,13,14,51,19,21,15,16,17,20,33,50,22,23,24,25,26,27,41,42,43,44,45,53,34,32,29,30,31,28,35,36,37],"settings":{"importJSON":true,"indentSize":false,"cepExport":false,"includeCSSJS":true,"showDialog":false,"functionWrapper":false,"itemReferenceList":"None"}}
+*/ 
+
+// W
+// =
+var w = new Window("dialog"); 
+    w.text = "File collector"; 
+    w.orientation = "column"; 
+    w.alignChildren = ["fill","top"]; 
+    w.spacing = 10; 
+    w.margins = 16; 
+
+// PNSOURCE
+// ========
+var pnSource = w.add("panel", undefined, undefined, {name: "pnSource"}); 
+    pnSource.text = "Источник файлов:"; 
+    pnSource.orientation = "column"; 
+    pnSource.alignChildren = ["left","top"]; 
+    pnSource.spacing = 10; 
+    pnSource.margins = 10; 
+
+// GRBROWSE
+// ========
+var grBrowse = pnSource.add("group", undefined, {name: "grBrowse"}); 
+    grBrowse.orientation = "row"; 
+    grBrowse.alignChildren = ["left","center"]; 
+    grBrowse.spacing = 10; 
+    grBrowse.margins = 0; 
+
+var etSource = grBrowse.add('edittext {properties: {name: "etSource", readonly: true}}'); 
+    etSource.preferredSize.width = 400; 
+
+var bnSource = grBrowse.add("button", undefined, undefined, {name: "bnSource"}); 
+    bnSource.text = "Обзор..."; 
+
+// PNSOURCE
+// ========
+var chSubfolder = pnSource.add("checkbox", undefined, undefined, {name: "chSubfolder"}); 
+    chSubfolder.text = "учитывать подкаталоги"; 
+
+// GRFILTER
+// ========
+var grFilter = pnSource.add("group", undefined, {name: "grFilter"}); 
+    grFilter.orientation = "row"; 
+    grFilter.alignChildren = ["left","center"]; 
+    grFilter.spacing = 10; 
+    grFilter.margins = 0; 
+
+var stFilter = grFilter.add("statictext", undefined, undefined, {name: "stFilter"}); 
+    stFilter.text = "искать следующие типы файлов:"; 
+    stFilter.preferredSize.width = 311; 
+
+var dlFilter = grFilter.add("dropdownlist", undefined, undefined, {name: "dlFilter"}); 
+    dlFilter.selection = 0; 
+    dlFilter.preferredSize.width = 80; 
+
+// PNLIST
+// ======
+var pnList = w.add("panel", undefined, undefined, {name: "pnList"}); 
+    pnList.text = "Список строк для поиска:"; 
+    pnList.orientation = "column"; 
+    pnList.alignChildren = ["fill","top"]; 
+    pnList.spacing = 10; 
+    pnList.margins = 10; 
+
+// GRLIST
+// ======
+var grList = pnList.add("group", undefined, {name: "grList"}); 
+    grList.orientation = "row"; 
+    grList.alignChildren = ["left","fill"]; 
+    grList.spacing = 10; 
+    grList.margins = 0; 
+
+var edittext1 = grList.add('edittext {properties: {name: "edittext1", multiline: true, scrollable: true}}'); 
+    edittext1.text = "etList"; 
+    edittext1.preferredSize.width = 440; 
+    edittext1.preferredSize.height = 200; 
+
+// GRLISTBUTTONS
+// =============
+var grListButtons = grList.add("group", undefined, {name: "grListButtons"}); 
+    grListButtons.orientation = "column"; 
+    grListButtons.alignChildren = ["center","top"]; 
+    grListButtons.spacing = 0; 
+    grListButtons.margins = 0; 
+
+var bnAddList = grListButtons.add("button", undefined, undefined, {name: "bnAddList"}); 
+    bnAddList.text = "+"; 
+    bnAddList.preferredSize.width = 40; 
+
+var bnSaveList = grListButtons.add("button", undefined, undefined, {name: "bnSaveList"}); 
+    bnSaveList.text = "↷"; 
+    bnSaveList.preferredSize.width = 40; 
+
+// PNOPTIONS
+// =========
+var pnOptions = pnList.add("panel", undefined, undefined, {name: "pnOptions"}); 
+    pnOptions.text = "Шаблон поиска и переименования файлов:"; 
+    pnOptions.orientation = "column"; 
+    pnOptions.alignChildren = ["fill","top"]; 
+    pnOptions.spacing = 10; 
+    pnOptions.margins = [10,15,10,10]; 
+
+// GRPRESET
+// ========
+var grPreset = pnOptions.add("group", undefined, {name: "grPreset"}); 
+    grPreset.orientation = "row"; 
+    grPreset.alignChildren = ["center","center"]; 
+    grPreset.spacing = 10; 
+    grPreset.margins = 0; 
+
+var stPreset = grPreset.add("statictext", undefined, undefined, {name: "stPreset"}); 
+    stPreset.text = "Пресет:"; 
+
+var dlPreset = grPreset.add("dropdownlist", undefined, undefined, {name: "dlPreset"}); 
+    dlPreset.selection = 0; 
+    dlPreset.preferredSize.width = 200; 
+
+// GRPRESETBUTTONS
+// ===============
+var grPresetButtons = grPreset.add("group", undefined, {name: "grPresetButtons"}); 
+    grPresetButtons.orientation = "row"; 
+    grPresetButtons.alignChildren = ["left","center"]; 
+    grPresetButtons.spacing = 0; 
+    grPresetButtons.margins = 0; 
+
+var bnRefresh = grPresetButtons.add("button", undefined, undefined, {name: "bnRefresh"}); 
+    bnRefresh.helpTip = "перезагрузить"; 
+    bnRefresh.text = "↻"; 
+    bnRefresh.preferredSize.width = 30; 
+
+var bnSave = grPresetButtons.add("button", undefined, undefined, {name: "bnSave"}); 
+    bnSave.helpTip = "сохранить"; 
+    bnSave.text = "↷"; 
+    bnSave.preferredSize.width = 30; 
+
+var bnAdd = grPresetButtons.add("button", undefined, undefined, {name: "bnAdd"}); 
+    bnAdd.helpTip = "добавить"; 
+    bnAdd.text = "+"; 
+    bnAdd.preferredSize.width = 30; 
+
+var bnDel = grPresetButtons.add("button", undefined, undefined, {name: "bnDel"}); 
+    bnDel.helpTip = "удалить"; 
+    bnDel.text = "×"; 
+    bnDel.preferredSize.width = 30; 
+
+// PNOPTIONS
+// =========
+var pnDiv = pnOptions.add("panel", undefined, undefined, {name: "pnDiv"}); 
+    pnDiv.alignment = "fill"; 
+
+// GRPATTERN
+// =========
+var grPattern = pnOptions.add("group", undefined, {name: "grPattern"}); 
+    grPattern.orientation = "row"; 
+    grPattern.alignChildren = ["left","fill"]; 
+    grPattern.spacing = 10; 
+    grPattern.margins = 0; 
+
+// GRSEARCH
+// ========
+var grSearch = grPattern.add("group", undefined, {name: "grSearch"}); 
+    grSearch.orientation = "column"; 
+    grSearch.alignChildren = ["fill","center"]; 
+    grSearch.spacing = 0; 
+    grSearch.margins = 0; 
+
+var stSearch = grSearch.add("statictext", undefined, undefined, {name: "stSearch"}); 
+    stSearch.text = "Искать:"; 
+    stSearch.preferredSize.width = 100; 
+
+var etSearch = grSearch.add('edittext {properties: {name: "etSearch"}}'); 
+    etSearch.preferredSize.width = 120; 
+
+// GRRENAME
+// ========
+var grRename = grPattern.add("group", undefined, {name: "grRename"}); 
+    grRename.orientation = "column"; 
+    grRename.alignChildren = ["fill","center"]; 
+    grRename.spacing = 0; 
+    grRename.margins = 0; 
+
+var stRename = grRename.add("statictext", undefined, undefined, {name: "stRename"}); 
+    stRename.text = "Переименовывать:"; 
+    stRename.preferredSize.width = 340; 
+
+var etRename = grRename.add('edittext {properties: {name: "etRename"}}'); 
+
+// GRPATTERNBUTTONS
+// ================
+var grPatternButtons = pnOptions.add("group", undefined, {name: "grPatternButtons"}); 
+    grPatternButtons.orientation = "row"; 
+    grPatternButtons.alignChildren = ["center","center"]; 
+    grPatternButtons.spacing = 5; 
+    grPatternButtons.margins = 0; 
+
+var bnWord = grPatternButtons.add("button", undefined, undefined, {name: "bnWord"}); 
+    bnWord.text = "[N] слово"; 
+
+var bnInterval = grPatternButtons.add("button", undefined, undefined, {name: "bnInterval"}); 
+    bnInterval.text = "[N-N] интервал"; 
+
+var bnFile = grPatternButtons.add("button", undefined, undefined, {name: "bnFile"}); 
+    bnFile.text = "[F] имя файла"; 
+
+var bnFolder = grPatternButtons.add("button", undefined, undefined, {name: "bnFolder"}); 
+    bnFolder.text = "[P] имя папки"; 
+
+// PNOPTIONS
+// =========
+var stPreview = pnOptions.add("statictext", undefined, undefined, {name: "stPreview"}); 
+    stPreview.preferredSize.width = 470; 
+
+// PNTARGET
+// ========
+var pnTarget = w.add("panel", undefined, undefined, {name: "pnTarget"}); 
+    pnTarget.text = "Назначение файлов:"; 
+    pnTarget.orientation = "column"; 
+    pnTarget.alignChildren = ["left","top"]; 
+    pnTarget.spacing = 10; 
+    pnTarget.margins = [10,15,10,10]; 
+
+var chSourceAsTarget = pnTarget.add("checkbox", undefined, undefined, {name: "chSourceAsTarget"}); 
+    chSourceAsTarget.text = "папка источника"; 
+
+// GRTARGET
+// ========
+var grTarget = pnTarget.add("group", undefined, {name: "grTarget"}); 
+    grTarget.orientation = "row"; 
+    grTarget.alignChildren = ["left","center"]; 
+    grTarget.spacing = 10; 
+    grTarget.margins = 0; 
+
+var etTarget = grTarget.add('edittext {properties: {name: "etTarget", readonly: true}}'); 
+    etTarget.preferredSize.width = 400; 
+
+var bnTarget = grTarget.add("button", undefined, undefined, {name: "bnTarget"}); 
+    bnTarget.text = "Обзор..."; 
+
+// PNTARGET
+// ========
+var chMove = pnTarget.add("checkbox", undefined, undefined, {name: "chMove"}); 
+    chMove.text = "перемещать файлы"; 
+
+// GRBUTTONS
+// =========
+var grButtons = w.add("group", undefined, {name: "grButtons"}); 
+    grButtons.orientation = "row"; 
+    grButtons.alignChildren = ["center","center"]; 
+    grButtons.spacing = 10; 
+    grButtons.margins = 0; 
+
+var ok = grButtons.add("button", undefined, undefined, {name: "ok"}); 
+    ok.text = "Предпросмотр"; 
+
+var cancel = grButtons.add("button", undefined, undefined, {name: "cancel"}); 
+    cancel.text = "Отмена"; 
+
